@@ -15,10 +15,27 @@ namespace TP6_GRUPO1
         {
             if (!IsPostBack)
             {
-                consultaSQL consulta = new consultaSQL();
-                gvProductos.DataSource = consulta.Consulta("select * from Productos");
-                gvProductos.DataBind();
+                CargarGridView();
             }
+        }
+
+        private void CargarGridView()
+        {
+            consultaSQL consulta = new consultaSQL();
+            gvProductos.DataSource = consulta.Consulta("select * from Productos");
+            gvProductos.DataBind();
+        }
+
+        protected void gvProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvProductos.PageIndex = e.NewPageIndex;
+            CargarGridView();
+        }
+
+        protected void gvProductos_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            gvProductos.EditIndex = e.NewEditIndex;
+            CargarGridView();
         }
     }
 }
