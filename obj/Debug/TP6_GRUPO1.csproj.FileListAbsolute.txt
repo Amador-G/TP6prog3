@@ -57,3 +57,5 @@ F:\UTN\Cuatrimestre 3\Programacion III\TP6_GRUPO1\obj\Debug\TP6_GRUPO1.csproj.Co
 F:\UTN\Cuatrimestre 3\Programacion III\TP6_GRUPO1\obj\Debug\TP6_GRUPO1.csproj.CopyComplete
 F:\UTN\Cuatrimestre 3\Programacion III\TP6_GRUPO1\obj\Debug\TP6_GRUPO1.dll
 F:\UTN\Cuatrimestre 3\Programacion III\TP6_GRUPO1\obj\Debug\TP6_GRUPO1.pdb
+F:\UTN\Cuatrimestre 3\Programacion III\TP6_GRUPO1\bin\System.Data.SqlClient.dll
+F:\UTN\Cuatrimestre 3\Programacion III\TP6_GRUPO1\bin\System.Data.SqlClient.xml

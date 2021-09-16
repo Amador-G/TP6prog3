@@ -65,7 +65,7 @@ namespace TP6_GRUPO1.Clases
 
         public bool EliminarProducto(Producto Producto)
         {
-            SqlCommand Comando = new SqlCommand;
+            SqlCommand Comando = new SqlCommand();
             ArmarParametrosProductosEliminar(ref Comando, Producto);
             AccesoDatos ad = new AccesoDatos();
             int FilasInsertadas = ad.EjecutarProcedimientoAlamcenado(Comando, "spEliminarProducto");
