@@ -21,7 +21,7 @@ namespace TP6_GRUPO1
 
         private void CargarGridView()
         {
-            consultaSQL consulta = new consultaSQL();
+            AccesoDAtos consulta = new AccesoDAtos();
             gvProductos.DataSource = consulta.Consulta("select * from Productos");
             gvProductos.DataBind();
         }
