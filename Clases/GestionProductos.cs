@@ -30,7 +30,54 @@ namespace TP6_GRUPO1.Clases
         private void ArmarParametrosProductosEliminar(ref SqlCommand Comando,Producto Producto)
         {
             SqlParameter sqlParametros = new SqlParameter();
-            sqlParametros = Comando.Parameters.Add("@IdProducto", SqlDbType.int);
+            sqlParametros = Comando.Parameters.Add("@IdProducto", SqlDbType.Int);
+            sqlParametros.Value = Producto.IdProducto;
         }
+
+        private void ArmarParametrosProductos(ref SqlCommand Comando, Producto Producto)
+        {
+            SqlParameter sqlParametros = new SqlParameter();
+            sqlParametros = Comando.Parameters.Add("@IdProducto", SqlDbType.Int);
+            sqlParametros.Value = Producto.IdProducto;
+            sqlParametros = Comando.Parameters.Add("@NombreProducto", SqlDbType.Int);
+            sqlParametros.Value = Producto.NombreProducto;
+            sqlParametros = Comando.Parameters.Add("@CantidadPorUnidad", SqlDbType.Int);
+            sqlParametros.Value = Producto.CantidadxUnidad;
+            sqlParametros = Comando.Parameters.Add("@PrecioUnidad", SqlDbType.Int);
+            sqlParametros.Value = Producto.PrecioxUnidad;
+        }
+
+        public bool ActualizarProducto(Producto Producto)
+        {
+            SqlCommand Comando = new SqlCommand();
+            ArmarParametrosProductos(ref Comando, Producto);
+            AccesoDatos ad = new AccesoDatos();
+            int FilasInsertadas = ad.EjecutarProcedimientoAlamcenado(Comando, "spActualizarProducto");
+            if(FilasInsertadas == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool EliminarProducto(Producto Producto)
+        {
+            SqlCommand Comando = new SqlCommand;
+            ArmarParametrosProductosEliminar(ref Comando, Producto);
+            AccesoDatos ad = new AccesoDatos();
+            int FilasInsertadas = ad.EjecutarProcedimientoAlamcenado(Comando, "spEliminarProducto");
+            if(FilasInsertadas == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+       
     }
 }
