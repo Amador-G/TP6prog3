@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace TP6_GRUPO1.Clases
 {
-    public class AccesoDatos
+    public class    AccesoDatos
     {
         string rutaBDProductos = "Data Source=localhost\\sqlexpress;Initial Catalog=Neptuno;Integrated Security=True";
 
@@ -57,18 +57,6 @@ namespace TP6_GRUPO1.Clases
             filasCambiadas = cmd.ExecuteNonQuery();
             Conexion.Close();
             return filasCambiadas;
-        }
-
-        public DataSet Consulta(string Consulta)
-        {
-            SqlConnection cn = new SqlConnection(rutaBDProductos);
-            cn.Open();
-            SqlCommand cmd = new SqlCommand(Consulta, cn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            cn.Close();
-            return ds;
         }
     }
 }

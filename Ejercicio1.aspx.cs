@@ -23,8 +23,8 @@ namespace TP6_GRUPO1
 
         private void CargarGridView()
         {
-            AccesoDatos consulta = new AccesoDatos();
-            gvProductos.DataSource = consulta.Consulta("select * from Productos");
+            GestionProductos consulta = new GestionProductos();
+            gvProductos.DataSource = consulta.ObternerTodosLosProductos();
             gvProductos.DataBind();
         }
 
