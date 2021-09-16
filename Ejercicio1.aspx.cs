@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using TP6_GRUPO1.Clases;
+
 
 namespace TP6_GRUPO1
 {
@@ -21,7 +23,7 @@ namespace TP6_GRUPO1
 
         private void CargarGridView()
         {
-            AccesoDAtos consulta = new AccesoDAtos();
+            AccesoDatos consulta = new AccesoDatos();
             gvProductos.DataSource = consulta.Consulta("select * from Productos");
             gvProductos.DataBind();
         }
