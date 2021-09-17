@@ -22,6 +22,35 @@ namespace TP6_GRUPO1.Clases
             return ds.Tables[NombreTabla];
         }
 
+        public DataTable CrearTablaProductos()
+        {
+            DataTable dt = new DataTable();
+            DataColumn Columna = new DataColumn("ID Producto", Type.GetType("System.Int"));
+            dt.Columns.Add(Columna);
+
+            Columna = new DataColumn("Nombre del producto", Type.GetType("System.String"));
+            dt.Columns.Add(Columna);
+
+            Columna = new DataColumn("ID del proveedor", Type.GetType("System.Int")); //Hay que comprobar si son tipo INT o String
+            dt.Columns.Add(Columna);
+
+            Columna = new DataColumn("Precio por unidad", Type.GetType("System.Int"));
+            dt.Columns.Add(Columna);
+            return dt;
+        }
+
+        private void AgregarFila(DataTable tabla, String IDprod, string NombreProd, string IDprov, string PU)
+        {
+            DataRow dr = tabla.NewRow();
+            dr["ID Producto"] = IDprod;
+            dr["Nombre del producto"] = NombreProd;
+            dr["ID del proveedor"] = IDprov;
+            dr["Precio por unidad"] = PU;
+
+            tabla.Rows.Add(dr);
+        }
+
+
         public DataTable ObternerTodosLosProductos()
         {
             return ObtenerTabla("Productos", "select * from Productos");

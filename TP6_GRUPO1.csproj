@@ -70,8 +70,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ejercicio 2\MostrarProductos.aspx" />
+    <Content Include="Ejercicio 2\SeleccionarProductos.aspx" />
     <Content Include="Ejercicio1.aspx" />
-    <Content Include="Ejercicio2.aspx" />
+    <Content Include="Ejercicio 2\Ejercicio2.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -79,6 +81,20 @@
     <Compile Include="Clases\AccesoDatos.cs" />
     <Compile Include="Clases\GestionProductos.cs" />
     <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Ejercicio 2\MostrarProductos.aspx.cs">
+      <DependentUpon>MostrarProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ejercicio 2\MostrarProductos.aspx.designer.cs">
+      <DependentUpon>MostrarProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicio 2\SeleccionarProductos.aspx.cs">
+      <DependentUpon>SeleccionarProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ejercicio 2\SeleccionarProductos.aspx.designer.cs">
+      <DependentUpon>SeleccionarProductos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Ejercicio1.aspx.cs">
       <DependentUpon>Ejercicio1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -86,11 +102,11 @@
     <Compile Include="Ejercicio1.aspx.designer.cs">
       <DependentUpon>Ejercicio1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Ejercicio2.aspx.cs">
+    <Compile Include="Ejercicio 2\Ejercicio2.aspx.cs">
       <DependentUpon>Ejercicio2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Ejercicio2.aspx.designer.cs">
+    <Compile Include="Ejercicio 2\Ejercicio2.aspx.designer.cs">
       <DependentUpon>Ejercicio2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">

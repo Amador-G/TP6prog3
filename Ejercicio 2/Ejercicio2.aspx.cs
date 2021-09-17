@@ -13,5 +13,10 @@ namespace TP6_GRUPO1
         {
 
         }
+
+        protected void lbEliminarProductos_Click(object sender, EventArgs e)
+        {
+            Session["TablaSeleccionados"] = null;
+        }
     }
 }
