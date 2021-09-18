@@ -56,5 +56,18 @@ namespace TP6_GRUPO1
             gvProductos.EditIndex = -1;
             CargarGridView();
         }
+
+        protected void gvProductos_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            String i_IdProducto = ((Label)gvProductos.Rows[e.RowIndex].FindControl("lblIdProducto")).Text;
+
+            Producto lib = new Producto();
+            lib.IdProducto = Convert.ToInt32(i_IdProducto);
+
+            GestionProductos gLibros = new GestionProductos();
+            gLibros.EliminarProducto(lib);
+
+            CargarGridView();
+        }
     }
 }
