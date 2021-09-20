@@ -12,9 +12,19 @@ namespace TP6_GRUPO1.Ejercicio_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             DataTable Seleccionados = (DataTable)Session["TablaSeleccionados"];
-            grdProdSel.DataSource = Seleccionados;
+            DataTable sindupl = new DataTable();
+            string[] sColumnas = { "ID Producto", "Nombre del producto", "ID del proveedor", "Precio por unidad" };
+            sindupl = Seleccionados.DefaultView.ToTable(true, sColumnas);
+            grdProdSel.DataSource = sindupl;
             grdProdSel.DataBind();
+            
+
+        }
+
+        protected void grdProdSel_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

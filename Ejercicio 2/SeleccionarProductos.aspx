@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="grdProductos" runat="server" AllowPaging="True" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" GridLines="None" OnPageIndexChanging="grdProductos_PageIndexChanging" OnSelectedIndexChanging="grdProductos_SelectedIndexChanging" PageSize="14">
+            <asp:GridView ID="grdProductos" runat="server" AllowPaging="True" AutoGenerateColumns="False" AutoGenerateSelectButton="True" CellPadding="4" ForeColor="#333333" GridLines="None" OnPageIndexChanging="grdProductos_PageIndexChanging" OnSelectedIndexChanging="grdProductos_SelectedIndexChanging" PageSize="14" OnSelectedIndexChanged="grdProductos_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:TemplateField HeaderText="ID Producto">

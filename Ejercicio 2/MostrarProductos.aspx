@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="grdProdSel" runat="server">
+            <asp:GridView ID="grdProdSel" runat="server" OnSelectedIndexChanged="grdProdSel_SelectedIndexChanged">
             </asp:GridView>
             <br />
             <a href="Ejercicio2.aspx">Volver a Inicio</a></div>

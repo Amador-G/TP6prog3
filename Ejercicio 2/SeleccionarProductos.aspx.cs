@@ -63,6 +63,7 @@ namespace TP6_GRUPO1.Ejercicio_2
             if (Session["TablaSeleccionados"] == null)
             {
                 DataTable TablaSeleccionados = CrearTablaProductos(); // No sé si está bien que esté acá
+                
                 AgregarFila(TablaSeleccionados, IDproducto, NombreProducto, IDproveedor, PrecioxUnidad);
                 Session["TablaSeleccionados"] = TablaSeleccionados;
             }
@@ -82,6 +83,11 @@ namespace TP6_GRUPO1.Ejercicio_2
         {
             grdProductos.PageIndex = e.NewPageIndex;
             CargarGridView();
+        }
+
+        protected void grdProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
